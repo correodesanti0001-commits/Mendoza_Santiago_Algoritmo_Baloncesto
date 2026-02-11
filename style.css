@@ -1,0 +1,148 @@
+:root {
+  --bg: #0a0a0a;
+  --panel: #121212;
+  --panel2: #1a1a1a;
+  --border: #262626;
+  --text: #ffffff;
+  --muted: rgba(255,255,255,.7);
+  --orange: #ff7a00;
+  --orange2: #ff9a3c;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px){
+  .grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  color: var(--muted);
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--panel2);
+  color: var(--text);
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 700;
+}
+
+.primary {
+  background: var(--orange);
+  color: black;
+}
+
+.primary:hover { filter: brightness(1.1); }
+
+.ghost {
+  background: var(--panel2);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.danger {
+  background: #b32121;
+  color: white;
+}
+
+.question {
+  background: var(--panel2);
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.duel {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+@media (min-width: 900px){
+  .duel { grid-template-columns: 1fr 1fr; }
+}
+
+.pick {
+  background: var(--panel2);
+  border: 1px solid var(--border);
+  padding: 16px;
+  text-align: left;
+}
+
+.pick:hover {
+  border-color: var(--orange);
+}
+
+.tag {
+  background: var(--orange);
+  color: black;
+  padding: 6px 10px;
+  border-radius: 8px;
+  margin-right: 10px;
+  font-weight: 900;
+}
+
+.topbox {
+  background: var(--panel2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px;
+  min-height: 120px;
+}
+
+.toprow {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.toprow:last-child { border-bottom: 0; }
+
+.foot {
+  color: var(--muted);
+  padding-bottom: 30px;
+}
